@@ -16,8 +16,6 @@ public class MarshmallowMonster
 	}
 	
 	public MarshmallowMonster(String name, int eyeCount, int arms, double tentacleCount, boolean hasBloop)
-	
-	
 	{
 		this.name = name;
 		this.eyeCount = eyeCount;
@@ -26,7 +24,7 @@ public class MarshmallowMonster
 		this.hasBloop = hasBloop;
 	}
 	
-	public String getname()
+	public String getName()
 	{
 		return name;
 	}
@@ -78,7 +76,7 @@ public class MarshmallowMonster
 	
 	public String toString()
 	{
-		String description = "Hi, I am a scary monster! My name is " + name + ",and I have " + eyeCount;
+		String description = "Hi, I am a scary monster! My name is " + name + " ,and I have " + eyeCount;
 		description += " eyes and I have " + armCount + " arms, and I have " + tentacleAmount + " tentacles";
 		description += " and my bloop existence is " + hasBloop;
 		
