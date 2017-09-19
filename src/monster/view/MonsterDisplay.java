@@ -11,7 +11,7 @@ public class MonsterDisplay
 		JOptionPane.showMessageDialog(null, textToDisplay);
 	}
 	
-	public String getRepsonse(String textToDisplay)
+	public String getResponse(String textToDisplay)
 	{
 		String response = "";
 		
