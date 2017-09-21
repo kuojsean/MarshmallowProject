@@ -39,7 +39,11 @@ public class MonsterController
 //		System.out.println(currentMonster.getName() + " suggests arms, they have " + currentMonster.getArmCount());
 		popup.displayText(currentMonster.getName() + " suggests arms, they have " + currentMonster.getArmCount());
 //		System.out.println("How many do you want to eat?");
-		popup.getResponse("How Mmany do you want to eat?");
+		int specialAnswer;
+		String unconverted = popup.getResponse("How many do you want to eat?");
+		
+		specialAnswer = Integer.parseInt(unconverted);
+		
 		Scanner myScanner = new Scanner(System.in);
 		int consumed = myScanner.nextInt();
 		
@@ -113,5 +117,23 @@ public class MonsterController
 		
 	}
 	
+
+	//Helper methods
+	private boolean isValidInteger(String sample)
+	{
+		boolean valid = false;
+		
+		try
+		{
+			Integer.parseInt(sample);
+			valid = true;
+		}
+		catch(NumberFormatException error)
+		{
+			popup.displayText("Only integervalues are valid: " + sample + " is not");
+		}
+		
+		return valid;
+	}
 	
 }
