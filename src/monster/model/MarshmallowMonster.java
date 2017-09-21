@@ -83,3 +83,5 @@ public class MarshmallowMonster
 		return description;
 	}
 }
+
+//This gives all the variables and ways to change them in the controller.

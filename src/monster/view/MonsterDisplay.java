@@ -21,3 +21,6 @@ public class MonsterDisplay
 	}
 	
 }
+
+
+//This allows for popups to happen in the program

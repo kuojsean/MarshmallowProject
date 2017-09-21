@@ -9,3 +9,6 @@ public class MonsterRunner
 		app.start();		
 	}
 }
+
+
+// This is the class that runs the whole program

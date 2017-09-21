@@ -39,7 +39,7 @@ public class MonsterController
 //		System.out.println(currentMonster.getName() + " suggests arms, they have " + currentMonster.getArmCount());
 		popup.displayText(currentMonster.getName() + " suggests arms, they have " + currentMonster.getArmCount());
 //		System.out.println("How many do you want to eat?");
-		int specialAnswer;
+		int specialAnswer = 0;
 		String unconverted = popup.getResponse("How many do you want to eat?");
 		
 		if(isValidInteger(unconverted))
@@ -49,7 +49,8 @@ public class MonsterController
 		
 		
 		Scanner myScanner = new Scanner(System.in);
-		int consumed = myScanner.nextInt();
+		int consumed = 0;
+		consumed = specialAnswer;
 		
 		if(consumed < 0)
 		{
@@ -166,7 +167,7 @@ public class MonsterController
 			Boolean.parseBoolean(sampleBoolean);
 			valid = true;
 		}
-		catch (Exception error)
+		catch (NumberFormatException error)
 		{
 			popup.displayText("Only boolean values are valid: " + sampleBoolean + " is not.");
 		}
@@ -175,3 +176,9 @@ public class MonsterController
 	
 	}
 }
+
+
+//This class is the instructions and it firsts goes through the outputs then it requires user input. It replies based off these inputs.
+//There are also helper methods so that it can prevent crashing and burning on user inputs.
+//If Else gives options to what the code should do based off certain values.
+//Try and Catch methods help prevent crashing by returning it valid and trying it if actually is valid
