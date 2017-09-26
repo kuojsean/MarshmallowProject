@@ -17,6 +17,18 @@ public class MonsterController
 	
 	public void start()
 	{
+		boolean finished = true;
+		int count = 0;
+//		while(count < 100)
+//		{
+//			popup.displayText("Big Baller Brand!" + count);
+//			count += 1;
+//		}
+		
+//		for(int loop = 0; loop < 15; loop +=1)	
+//		{
+//			popup.displayText("I am balling " + (loop +1) + " times out of 15");
+//		}
 		MarshmallowMonster sample = new MarshmallowMonster();
 //		System.out.println(sample);
 		popup.displayText(sample.toString());
