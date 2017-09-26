@@ -60,10 +60,10 @@ public class MonsterController
 			unconverted = popup.getResponse("How many do you want to eat?");
 		}
 		
-		if(isValidInteger(unconverted))
-		{
+//		if(isValidInteger(unconverted))
+//		{
 			specialAnswer = Integer.parseInt(unconverted);
-		}
+//		}
 		
 		Scanner myScanner = new Scanner(System.in);
 		int consumed = 0;
@@ -95,9 +95,22 @@ public class MonsterController
 //		System.out.println(currentMonster.getName() + " wants some eyes to be zapped. He has " + currentMonster.getEyeCount() + " eyes.");
 		popup.displayText(currentMonster.getName() + " wants some eyes to be zapped. He has " + currentMonster.getEyeCount() + " eyes.");
 //		System.out.println("How many do you want to zap?");
-		popup.getResponse("How many do you want to zap?");
+//		popup.getResponse("How many do you want to zap?");
+//		Scanner secondScanner = new Scanner(System.in);
+		int zapAnswer = 0;
+		String zapUnconverted = popup.getResponse("How many do you want to zap?");
+		
+		while(!isValidInteger(zapUnconverted))
+		{
+			popup.displayText("Try again!");
+			zapUnconverted = popup.getResponse("How many do you want to zap?");
+		}
+		
+		zapAnswer = Integer.parseInt(zapUnconverted);
+		
 		Scanner secondScanner = new Scanner(System.in);
-		int zapped = secondScanner.nextInt();
+		int zapped = 0;
+		zapped = zapAnswer;
 		
 		if(zapped == 0)
 		{
@@ -134,7 +147,14 @@ public class MonsterController
 		
 		popup.displayText("Hey look a me!!!");
 		String answer = popup.getResponse("How many meals are you eating today?");
-		System.out.println(answer);
+		
+		while(!isValidInteger(answer))
+		{
+			popup.displayText("Try again! That's not a valid innteger");
+			answer = popup.getResponse("How many do you want to zap?");
+		}
+		
+//		System.out.println(answer);
 		popup.displayText(answer);
 		
 	}
