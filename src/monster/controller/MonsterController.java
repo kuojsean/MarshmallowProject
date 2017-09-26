@@ -54,11 +54,16 @@ public class MonsterController
 		int specialAnswer = 0;
 		String unconverted = popup.getResponse("How many do you want to eat?");
 		
+		while(!isValidInteger(unconverted))
+		{
+			popup.displayText("Try again!");
+			unconverted = popup.getResponse("How many do you want to eat?");
+		}
+		
 		if(isValidInteger(unconverted))
 		{
 			specialAnswer = Integer.parseInt(unconverted);
 		}
-		
 		
 		Scanner myScanner = new Scanner(System.in);
 		int consumed = 0;
